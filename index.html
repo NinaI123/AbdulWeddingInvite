@@ -305,6 +305,71 @@
 
                 
 
+                <!-- Song Request -->
+                <section class="glass-panel p-8 rounded-xl md:p-10 space-y-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i data-lucide="music" class="w-20 h-20"></i>
+                    </div>
+
+                    <div class="space-y-2 relative z-10">
+                        <h3 class="font-serif text-2xl md:text-3xl text-teatro-gold" data-i18n="songRequest.title">Help
+                            Us Curate Our Celebration!</h3>
+                        <p class="font-sans text-sm text-teatro-beige/60" data-i18n="songRequest.subtitle">Suggest a
+                            song for our wedding playlist!</p>
+                    </div>
+
+                    <form id="song-form" class="space-y-4 relative z-10">
+                        <div class="grid grid-cols-1 gap-4">
+                            <input type="text" name="name" id="song-name" required
+                                class="w-full bg-teatro-dark/50 border border-teatro-gold/20 rounded px-4 py-3 text-teatro-warm focus:outline-none focus:border-teatro-gold/60 transition-colors placeholder:text-teatro-beige/20 text-sm"
+                                placeholder="Your Name">
+                            <input type="text" name="song" id="song-title" required
+                                class="w-full bg-teatro-dark/50 border border-teatro-gold/20 rounded px-4 py-3 text-teatro-warm focus:outline-none focus:border-teatro-gold/60 transition-colors placeholder:text-teatro-beige/20 text-sm"
+                                placeholder="Song Title">
+                            <input type="text" name="artist" id="song-artist"
+                                class="w-full bg-teatro-dark/50 border border-teatro-gold/20 rounded px-4 py-3 text-teatro-warm focus:outline-none focus:border-teatro-gold/60 transition-colors placeholder:text-teatro-beige/20 text-sm"
+                                placeholder="Artist Name">
+                        </div>
+
+                        <div class="pt-2">
+                            <label class="block text-xs uppercase tracking-widest text-teatro-gold/60 mb-2"
+                                data-i18n="songRequest.eventLabel">Which Event?</label>
+                            <div class="flex flex-wrap gap-2">
+                                <label
+                                    class="flex items-center gap-2 cursor-pointer px-3 py-1.5 rounded-full border transition-colors bg-teatro-dark/30 border-teatro-gold/10 hover:border-teatro-gold/40">
+                                    <input type="radio" name="event" value="Mehndi" class="hidden"
+                                        onchange="updateRadioStyles(this)">
+                                    <span class="text-xs text-teatro-beige/80">Mehndi</span>
+                                </label>
+                                <label
+                                    class="flex items-center gap-2 cursor-pointer px-3 py-1.5 rounded-full border transition-colors bg-teatro-dark/30 border-teatro-gold/10 hover:border-teatro-gold/40">
+                                    <input type="radio" name="event" value="Nikah" class="hidden"
+                                        onchange="updateRadioStyles(this)">
+                                    <span class="text-xs text-teatro-beige/80">Nikah</span>
+                                </label>
+                                <label
+                                    class="flex items-center gap-2 cursor-pointer px-3 py-1.5 rounded-full border transition-colors bg-teatro-gold text-teatro-dark border-teatro-gold">
+                                    <input type="radio" name="event" value="Reception" class="hidden" checked
+                                        onchange="updateRadioStyles(this)">
+                                    <span class="text-xs text-teatro-dark font-bold">Reception</span>
+                                </label>
+                                <label
+                                    class="flex items-center gap-2 cursor-pointer px-3 py-1.5 rounded-full border transition-colors bg-teatro-dark/30 border-teatro-gold/10 hover:border-teatro-gold/40">
+                                    <input type="radio" name="event" value="Walima" class="hidden"
+                                        onchange="updateRadioStyles(this)">
+                                    <span class="text-xs text-teatro-beige/80">Walima</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="song-submit"
+                            class="w-full sm:w-auto mt-4 px-6 py-3 bg-teatro-gold/10 hover:bg-teatro-gold text-teatro-gold hover:text-teatro-dark border border-teatro-gold transition-all duration-300 rounded font-sans uppercase tracking-widest text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                            data-i18n="songRequest.submit">
+                            Submit Request
+                        </button>
+                    </form>
+                </section>
+
                 <!-- Blessings Wall -->
                 <section class="glass-panel p-8 rounded-xl md:p-10 space-y-8 flex flex-col h-full bg-white/70">
                     <div class="space-y-2 border-b border-teatro-gold/10 pb-4">
