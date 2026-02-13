@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase Connection Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <h1>Supabase Connection Test</h1>
+    <div id="status">Testing connection...</div>
+    <div id="results"></div>
+
+    <script>
+        const SUPABASE_URL = "https://nswmgywvzvsfkuyvwuby.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zd21neXd2enZzZmt1eXZ3dWJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA5NTgxOTYsImV4cCI6MjA4NjUzNDE5Nn0.thgnS3rdqe49eL87kmXsjBAX92Mg5crijVVDdUoLsKU";
+
+        async function testConnection() {
+            const statusDiv = document.getElementById('status');
+            const resultsDiv = document.getElementById('results');
+
+            try {
+                // Initialize Supabase
+                const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+                statusDiv.innerHTML = "✅ Supabase client initialized<br>";
+
+                // Test blessings table
+                statusDiv.innerHTML += "Testing 'blessings' table...<br>";
+                const { data: blessingsData, error: blessingsError } = await supabase
+                    .from('blessings')
+                    .select('*')
+                    .limit(5);
+
+                if (blessingsError) {
+                    statusDiv.innerHTML += `❌ Blessings table error: ${blessingsError.message}<br>`;
+                } else {
+                    statusDiv.innerHTML += `✅ Blessings table OK (${blessingsData.length} records)<br>`;
+                    resultsDiv.innerHTML += `<h3>Blessings:</h3><pre>${JSON.stringify(blessingsData, null, 2)}</pre>`;
+                }
+
+                // Test song_requests table
+                statusDiv.innerHTML += "Testing 'song_requests' table...<br>";
+                const { data: songsData, error: songsError } = await supabase
+                    .from('song_requests')
+                    .select('*')
+                    .limit(5);
+
+                if (songsError) {
+                    statusDiv.innerHTML += `❌ Song requests table error: ${songsError.message}<br>`;
+                } else {
+                    statusDiv.innerHTML += `✅ Song requests table OK (${songsData.length} records)<br>`;
+                    resultsDiv.innerHTML += `<h3>Song Requests:</h3><pre>${JSON.stringify(songsData, null, 2)}</pre>`;
+                }
+
+                // Test rsvps table
+                statusDiv.innerHTML += "Testing 'rsvps' table...<br>";
+                const { data: rsvpsData, error: rsvpsError } = await supabase
+                    .from('rsvps')
+                    .select('*')
+                    .limit(5);
+
+                if (rsvpsError) {
+                    statusDiv.innerHTML += `❌ RSVPs table error: ${rsvpsError.message}<br>`;
+                } else {
+                    statusDiv.innerHTML += `✅ RSVPs table OK (${rsvpsData.length} records)<br>`;
+                    resultsDiv.innerHTML += `<h3>RSVPs:</h3><pre>${JSON.stringify(rsvpsData, null, 2)}</pre>`;
+                }
+
+            } catch (error) {
+                statusDiv.innerHTML += `❌ Error: ${error.message}`;
+            }
+        }
+
+        // Run test when page loads
+        window.addEventListener('load', testConnection);
+    </script>
+</body>
+
+</html>

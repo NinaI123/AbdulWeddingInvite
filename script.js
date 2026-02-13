@@ -1,10 +1,6 @@
 // Supabase Configuration
-import { createClient } from "https://esm.sh/@supabase/supabase-js";
-
-const SUPABASE_URL = import.meta.env.SUPABASE_URL;
-const SUPABASE_ANON_KEY = import.meta.env.SUPABASE_ANON_KEY;
-
-export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const SUPABASE_URL = "https://nswmgywvzvsfkuyvwuby.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zd21neXd2enZzZmt1eXZ3dWJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA5NTgxOTYsImV4cCI6MjA4NjUzNDE5Nn0.thgnS3rdqe49eL87kmXsjBAX92Mg5crijVVDdUoLsKU";
 
 let supabaseClient = null;
 

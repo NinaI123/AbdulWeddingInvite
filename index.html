@@ -29,25 +29,25 @@
                             accent: '#F3F8F6',
                         }
                     },
-// colors: {
-//     teatro: {
-//         // LIGHT BACKGROUNDS
-//         light: '#FFFFFF',        // Pure white background
-//         beige: '#F8F5F0',        // Light warm beige background
-//         accent: '#F1EDE4',       // Subtle beige for accents
-        
-//         // DARK TEXT
-//         dark: '#2C3E2F',         // Dark matcha green - primary text
-//         primary: '#3D5240',      // Medium matcha - headings
-//         warm: '#4A5F4A',         // Warmer matcha - secondary text
-        
-//         // ACCENT COLORS
-//         gold: '#8A9B7B',         // Muted matcha gold
-//         matcha: '#6B8B6A',       // Brighter matcha for buttons/borders
-//         highlight: '#7A9A79',    // Lighter matcha accents
-//     }
-// },
-  fontFamily: {
+                    // colors: {
+                    //     teatro: {
+                    //         // LIGHT BACKGROUNDS
+                    //         light: '#FFFFFF',        // Pure white background
+                    //         beige: '#F8F5F0',        // Light warm beige background
+                    //         accent: '#F1EDE4',       // Subtle beige for accents
+
+                    //         // DARK TEXT
+                    //         dark: '#2C3E2F',         // Dark matcha green - primary text
+                    //         primary: '#3D5240',      // Medium matcha - headings
+                    //         warm: '#4A5F4A',         // Warmer matcha - secondary text
+
+                    //         // ACCENT COLORS
+                    //         gold: '#8A9B7B',         // Muted matcha gold
+                    //         matcha: '#6B8B6A',       // Brighter matcha for buttons/borders
+                    //         highlight: '#7A9A79',    // Lighter matcha accents
+                    //     }
+                    // },
+                    fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
                         sans: ['"Inter"', 'sans-serif'],
                         arabic: ['"Amiri"', 'serif'],
@@ -76,7 +76,7 @@
             class="px-3 py-1 rounded-full text-xs font-serif transition-all duration-300 bg-teatro-gold text-teatro-dark font-bold shadow-lg transform scale-105">EN</button>
         <button onclick="setLanguage('ur')" id="lang-ur"
             class="px-3 py-1 rounded-full text-xs font-serif transition-all duration-300 bg-white/50 text-teatro-warm hover:bg-white hover:text-teatro-gold">UR</button>
-            <button onclick="setLanguage('hi')" id="lang-hi"
+        <button onclick="setLanguage('hi')" id="lang-hi"
             class="px-3 py-1 rounded-full text-xs font-serif transition-all duration-300 bg-white/50 text-teatro-warm hover:bg-white hover:text-teatro-gold">HI</button>
     </div>
 
@@ -124,17 +124,17 @@
                 </div>
 
                 <div class="font-sans text-teatro-warm uppercase tracking-[0.2em] text-xs md:text-sm">
-                     Mr. & Mrs. Izharul Haq 
+                    Mr. & Mrs. Izharul Haq
                 </div>
 
                 <h2 class="font-serif text-2xl md:text-2.5xl text-teatro-warm leading-relaxed px-4"
                     data-i18n="hero.request">
-                    Request the Honor of Your Presence and Blessings on the Auspicious Occasion of the Wedding Ceremony of their Beloved Son
+                    Request the Honor of Your Presence and Blessings on the Auspicious Occasion of the Wedding Ceremony
+                    of their Beloved Son
                 </h2>
 
                 <div class="space-y-6 pt-4">
-                    <div
-                        class="font-serif text-5xl md:text-7xl lg:text-8xl text-teatro-gold gold-gradient-text transform hover:scale-105 transition-transform duration-700 cursor-default"
+                    <div class="font-serif text-5xl md:text-7xl lg:text-8xl text-teatro-gold gold-gradient-text transform hover:scale-105 transition-transform duration-700 cursor-default"
                         data-i18n="hero.groomname">
                         Abdul Sattar
                     </div>
@@ -144,8 +144,7 @@
                     <div class="font-serif text-2xl md:text-4xl text-teatro-warm italic">
                         &
                     </div>
-                    <div
-                        class="font-serif text-5xl md:text-7xl lg:text-8xl text-teatro-gold gold-gradient-text transform hover:scale-105 transition-transform duration-700 cursor-default"
+                    <div class="font-serif text-5xl md:text-7xl lg:text-8xl text-teatro-gold gold-gradient-text transform hover:scale-105 transition-transform duration-700 cursor-default"
                         data-i18n="hero.bridename">
                         Samra Fatima
                     </div>
@@ -256,7 +255,8 @@
                         Balrampur Garden
                     </h2>
                     <div class="flex flex-col items-center gap-2 text-teatro-warm font-sans tracking-wide">
-                        <p data-i18n="venue.address">Doordarshan Kendra, 23, Ashok Marg, Hazratganj, Lucnkow, UP, India</p>
+                        <p data-i18n="venue.address">Doordarshan Kendra, 23, Ashok Marg, Hazratganj, Lucnkow, UP, India
+                        </p>
                         <a href="https://www.google.com/maps/place/Balrampur+Garden/@26.854854,80.9475689,779m/data=!3m2!1e3!4b1!4m6!3m5!1s0x399bfd0c3ba16e03:0x3255312237e4f1cc!8m2!3d26.854854!4d80.9501438!16s%2Fg%2F1tykssny?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank" rel="noopener noreferrer"
                             class="flex items-center gap-2 text-xs uppercase text-teatro-gold border-b border-teatro-gold/50 hover:text-teatro-accent pb-0.5 mt-2 transition-colors">
@@ -303,72 +303,6 @@
                     class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-teatro-gold/20 to-transparent -translate-x-1/2 hidden md:block">
                 </div>
 
-                
-
-                <!-- Song Request -->
-                <section class="glass-panel p-8 rounded-xl md:p-10 space-y-8 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <i data-lucide="music" class="w-20 h-20"></i>
-                    </div>
-
-                    <div class="space-y-2 relative z-10">
-                        <h3 class="font-serif text-2xl md:text-3xl text-teatro-gold" data-i18n="songRequest.title">Help
-                            Us Curate Our Celebration!</h3>
-                        <p class="font-sans text-sm text-teatro-beige/60" data-i18n="songRequest.subtitle">Suggest a
-                            song for our wedding playlist!</p>
-                    </div>
-
-                    <form id="song-form" class="space-y-4 relative z-10">
-                        <div class="grid grid-cols-1 gap-4">
-                            <input type="text" name="name" id="song-name" required
-                                class="w-full bg-teatro-dark/50 border border-teatro-gold/20 rounded px-4 py-3 text-teatro-warm focus:outline-none focus:border-teatro-gold/60 transition-colors placeholder:text-teatro-beige/20 text-sm"
-                                placeholder="Your Name">
-                            <input type="text" name="song" id="song-title" required
-                                class="w-full bg-teatro-dark/50 border border-teatro-gold/20 rounded px-4 py-3 text-teatro-warm focus:outline-none focus:border-teatro-gold/60 transition-colors placeholder:text-teatro-beige/20 text-sm"
-                                placeholder="Song Title">
-                            <input type="text" name="artist" id="song-artist"
-                                class="w-full bg-teatro-dark/50 border border-teatro-gold/20 rounded px-4 py-3 text-teatro-warm focus:outline-none focus:border-teatro-gold/60 transition-colors placeholder:text-teatro-beige/20 text-sm"
-                                placeholder="Artist Name">
-                        </div>
-
-                        <div class="pt-2">
-                            <label class="block text-xs uppercase tracking-widest text-teatro-gold/60 mb-2"
-                                data-i18n="songRequest.eventLabel">Which Event?</label>
-                            <div class="flex flex-wrap gap-2">
-                                <label
-                                    class="flex items-center gap-2 cursor-pointer px-3 py-1.5 rounded-full border transition-colors bg-teatro-dark/30 border-teatro-gold/10 hover:border-teatro-gold/40">
-                                    <input type="radio" name="event" value="Mehndi" class="hidden"
-                                        onchange="updateRadioStyles(this)">
-                                    <span class="text-xs text-teatro-beige/80">Mehndi</span>
-                                </label>
-                                <label
-                                    class="flex items-center gap-2 cursor-pointer px-3 py-1.5 rounded-full border transition-colors bg-teatro-dark/30 border-teatro-gold/10 hover:border-teatro-gold/40">
-                                    <input type="radio" name="event" value="Nikah" class="hidden"
-                                        onchange="updateRadioStyles(this)">
-                                    <span class="text-xs text-teatro-beige/80">Nikah</span>
-                                </label>
-                                <label
-                                    class="flex items-center gap-2 cursor-pointer px-3 py-1.5 rounded-full border transition-colors bg-teatro-gold text-teatro-dark border-teatro-gold">
-                                    <input type="radio" name="event" value="Reception" class="hidden" checked
-                                        onchange="updateRadioStyles(this)">
-                                    <span class="text-xs text-teatro-dark font-bold">Reception</span>
-                                </label>
-                                <label
-                                    class="flex items-center gap-2 cursor-pointer px-3 py-1.5 rounded-full border transition-colors bg-teatro-dark/30 border-teatro-gold/10 hover:border-teatro-gold/40">
-                                    <input type="radio" name="event" value="Walima" class="hidden"
-                                        onchange="updateRadioStyles(this)">
-                                    <span class="text-xs text-teatro-beige/80">Walima</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <button type="submit" id="song-submit"
-                            class="w-full sm:w-auto mt-4 px-6 py-3 bg-teatro-gold/10 hover:bg-teatro-gold text-teatro-gold hover:text-teatro-dark border border-teatro-gold transition-all duration-300 rounded font-sans uppercase tracking-widest text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-                            data-i18n="songRequest.submit">
-                            Submit Request
-                        </button>
-                    </form>
-                </section>
 
                 <!-- Blessings Wall -->
                 <section class="glass-panel p-8 rounded-xl md:p-10 space-y-8 flex flex-col h-full bg-white/70">
@@ -473,7 +407,7 @@
                 </div>
             </section> -->
         </div>
-       
+
         <footer
             class="py-8 text-center text-teatro-beige/30 text-xs uppercase tracking-widest border-t border-teatro-primary mt-20">
             Invited with Love
@@ -487,7 +421,7 @@
 </html>
 
 
- <!-- Song Request
+<!-- Song Request
                 <section class="glass-panel p-8 rounded-xl md:p-10 space-y-6 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
                         <i data-lucide="music" class="w-20 h-20"></i>
