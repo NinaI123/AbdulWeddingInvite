@@ -426,40 +426,47 @@ async function fetchBlessings() {
 
 function initForms() {
     // Song Request
-    document.getElementById('song-form').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn = document.getElementById('song-submit');
-        const originalText = btn.textContent;
-        btn.textContent = "Sending...";
-        btn.disabled = true;
+    const songForm = document.getElementById('song-form');
+    if (songForm) {
+        songForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('song-submit');
+            const originalText = btn ? btn.textContent : "Submit";
+            if (btn) { btn.textContent = "Sending..."; btn.disabled = true; }
 
-        const formData = new FormData(e.target);
+            const formData = new FormData(e.target);
 
-        try {
-            if (supabaseClient) {
-                const { error } = await supabaseClient.from('song_requests').insert([{
+            try {
+                if (!supabaseClient) {
+                    console.warn("Supabase client not initialized for song request");
+                    throw new Error("Database connection not available. Refresh and try again.");
+                }
+
+                const { data, error } = await supabaseClient.from('song_requests').insert([{
                     name: formData.get('name'),
                     song: formData.get('song'),
                     artist: formData.get('artist'),
                     event: formData.get('event'),
                     submitted_at: new Date()
                 }]);
-                if (error) throw error;
-            }
 
-            btn.textContent = "Request Sent!";
-            e.target.reset();
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 3000);
-        } catch (error) {
-            console.error(error);
-            alert("Error submitting request.");
-            btn.textContent = originalText;
-            btn.disabled = false;
-        }
-    });
+                console.log("Song request insert result:", { data, error });
+                if (error) throw error;
+
+                if (btn) btn.textContent = "Request Sent!";
+                e.target.reset();
+                setTimeout(() => {
+                    if (btn) { btn.textContent = originalText; btn.disabled = false; }
+                }, 3000);
+            } catch (error) {
+                console.error("Error submitting song request:", error);
+                alert("Error submitting request: " + (error.message || error));
+                if (btn) { btn.textContent = originalText; btn.disabled = false; }
+            }
+        });
+    } else {
+        console.info('Song form not present in DOM (song requests UI may be commented out).');
+    }
 
     // Blessings
     document.getElementById('blessing-form').addEventListener('submit', async (e) => {
