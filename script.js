@@ -1,6 +1,8 @@
 // Supabase Configuration
-const SUPABASE_URL = "https://nswmgywvzvsfkuyvwuby.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zd21neXd2enZzZmt1eXZ3dWJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA5NTgxOTYsImV4cCI6MjA4NjUzNDE5Nn0.thgnS3rdqe49eL87kmXsjBAX92Mg5crijVVDdUoLsKU";
+// Credentials are loaded from config.js (which is gitignored)
+const SUPABASE_URL = window.CONFIG?.SUPABASE_URL || "";
+const SUPABASE_ANON_KEY = window.CONFIG?.SUPABASE_ANON_KEY || "";
+
 
 let supabaseClient = null;
 
