@@ -402,7 +402,7 @@ async function fetchBlessings() {
         const { data, error } = await supabaseClient
             .from('blessings')
             .select('*')
-            .order('created_at', { ascending: false })
+            .order('created_at', { ascending: true })
             .limit(3);
 
         if (data) {
