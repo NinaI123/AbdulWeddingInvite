@@ -32,7 +32,7 @@ const translations = {
         hero: {
             bismillah: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
             bismillahTrans: "With the Blessings of Allah, The Most Gracious, The Most Merciful",
-            request: "Request the Honor of Your Presence and Blessings on the auspicious occasion of the Wedding Ceremony of their beloved Granddaughter",
+            request: "Request the Honor of Your Presence and Blessings on the auspicious occasion of the Wedding Ceremony of their beloved son",
             tap: "Tap to continue",
             bridename: "Samra Fatima",
             groomname: "Abdul Sattar"
@@ -403,7 +403,7 @@ async function fetchBlessings() {
             .from('blessings')
             .select('*')
             .order('created_at', { ascending: false })
-            .limit(20);
+            .limit(3);
 
         if (data) {
             const feed = document.getElementById('blessings-feed');
