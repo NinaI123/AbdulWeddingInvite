@@ -32,7 +32,7 @@ const translations = {
         hero: {
             bismillah: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
             bismillahTrans: "With the Blessings of Allah, The Most Gracious, The Most Merciful",
-            request: "Request the Honor of Your Presence and Blessings on the auspicious occasion of the Wedding Ceremony of their beloved son",
+            request: "Request the Pleasure of having your Company on the Auspicious Occasion of Dawat-e-Walima of their Sonn",
             tap: "Tap to continue",
             bridename: "Samra Fatima",
             groomname: "Abdul Sattar"
@@ -45,7 +45,7 @@ const translations = {
         },
         venue: {
             title: "The Venue",
-            address: "Rana Pratap Marg, Hazratganj, Lucknow, Uttar Pradesh"
+            address: "Doordarshan Kendra, 23, Ashok Marg, Hazratganj, Lucnkow, UP, India"
         },
         dressCode: {
             title: "Dress Code",
@@ -94,7 +94,7 @@ const translations = {
         },
         venue: {
             title: "مقام",
-            address: "رانا پرتاپ مارگ، حضرت گنج، لکھنؤ، اتر پردیش"
+            address: "دور درشن سینٹر، 23، اشوک مارگ، حضرت گنج، لکھنؤ، یوپی"
         },
         dressCode: {
             title: "ڈریس کوڈ",
@@ -130,7 +130,7 @@ const translations = {
         hero: {
             bismillah: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
             bismillahTrans: "अल्लाह के नाम से, जो बड़ा मेहरबान और रहमत करने वाला है",
-            request: "आपकी सम्मानित उपस्थिति का अनुरोध करते हैं निकाह समारोह में",
+            request: "उनके पुत्र की दावत-ए-वलिमा के शुभ अवसर पर आपकी उपस्थिति का अनुरोध है",
             tap: "जारी रखने के लिए टैप करें",
             bridename: "Samra Fatima",
             groomname: "Abdul Sattar"
@@ -143,7 +143,7 @@ const translations = {
         },
         venue: {
             title: "स्थान",
-            address: "राणा प्रताप मार्ग, हज़रतगंज, लखनऊ, उत्तर प्रदेश"
+            address: "दूरदर्शन केंद्र, 23, अशोक मार्ग, हजरतगंज, लखनऊ, उत्तर प्रदेश"
         },
         dressCode: {
             title: "ड्रेस कोड",
